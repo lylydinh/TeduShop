@@ -7,13 +7,20 @@ namespace TeduShop.Model.Abstract
     {
         public DateTime? CreatedDate { set; get; }
 
-        [MaxLength(256)]//chi ra do dai trong database
-        public string CreatedBy { set; get; } 
-        public DateTime? UpdatedDate { set; get; } 
         [MaxLength(256)]
-        public string UpdatedBy { set; get; } 
-        public string MetaKeyworld { set; get; } 
+        public string CreatedBy { set; get; }
+
+        public DateTime? UpdatedDate { set; get; }
+
+        [MaxLength(256)]
+        public string UpdatedBy { set; get; }
+
+        [MaxLength(256)]
+        public string MetaKeyword { set; get; }
+
+        [MaxLength(256)]
         public string MetaDescription { set; get; }
+
         public bool Status { set; get; }
     }
 }
