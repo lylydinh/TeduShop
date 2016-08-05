@@ -15,7 +15,7 @@ namespace TeduShop.Model.Models
         [MaxLength(256)]
         public string Name { set; get; }
 
-        [Column(TypeName = "varchar")]
+        [Column(TypeName = "varchar")]//chi ra chinh xac kieu du lieu 
         [MaxLength(256)]
         [Required]
         public string Alias { set; get; }
