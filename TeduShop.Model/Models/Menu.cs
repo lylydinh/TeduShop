@@ -10,6 +10,7 @@ namespace TeduShop.Model.Models
     public class Menu
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
 
         [Required]
@@ -18,17 +19,16 @@ namespace TeduShop.Model.Models
         [Required]
         public string URL { set; get; }
 
-        public int? DisplayOrder { set; get; }
-
         [Required]
         public int GroupID { set; get; }
 
-        [ForeignKey("GroupID")]
-        public virtual MenuGroup MenuGroup { set; get; }
-
-        public string Target { set; get; }
-
         [Required]
         public bool Status { set; get; }
+
+        public int? DisplayOrder { set; get; }
+        public string Target { set; get; }
+
+        [ForeignKey("GroupID")]
+        public virtual MenuGroup MenuGroup { set; get; }
     }
 }
