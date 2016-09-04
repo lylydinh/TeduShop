@@ -22,6 +22,7 @@ namespace TeduShop.Data.Infrastructure
         T GetSingleById(int id);
 
         T GetSingleByCondition(Expression<Func<T, bool>> expression, string[] includes = null);
+
         //lay ra cac bang con
         IQueryable<T> GetAll(string[] includes = null);
 

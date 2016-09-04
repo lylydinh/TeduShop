@@ -12,7 +12,7 @@ namespace TeduShop.Model.Models
 
         [Key]
         [Column(TypeName = "varchar", Order = 2)]
-        [MaxLength(50)] 
+        [MaxLength(50)]
         public string TagID { set; get; }
 
         [ForeignKey("PostID")]
