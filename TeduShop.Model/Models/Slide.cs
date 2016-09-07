@@ -15,10 +15,10 @@ namespace TeduShop.Model.Models
         public string Name { set; get; }
 
         [MaxLength(256)]
-        public string Description { set; get; }
+        public string Image { set; get; }
 
         [MaxLength(256)]
-        public string Image { set; get; }
+        public string Description { set; get; }
 
         [MaxLength(256)]
         public string Url { set; get; }
