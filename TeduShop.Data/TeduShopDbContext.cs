@@ -31,6 +31,7 @@ namespace TeduShop.Data
         public DbSet<Tag> Tags { set; get; }
         public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
 
+        public DbSet<Error> Errors { get; set; }//tao moi 1 bang error de log loi 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //tao 1 phuong thuc ghi de
