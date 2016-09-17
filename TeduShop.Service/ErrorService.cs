@@ -9,13 +9,13 @@ using TeduShop.Model.Models;
 
 namespace TeduShop.Service
 {
-    public interface IErrorMessage
+    public interface IErrorService
     {
         Error Create(Error error);
         void Save();
 
     }
-    public class ErrorService : IErrorMessage
+    public class ErrorService : IErrorService
     {
         IErrorRepository _errorRepository;
         IUnitOfWork _unitOfWork;
