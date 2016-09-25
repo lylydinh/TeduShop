@@ -57,13 +57,9 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
-    <Compile Include="Migrations\201609041257353_InitialDb.cs" />
-    <Compile Include="Migrations\201609041257353_InitialDb.Designer.cs">
-      <DependentUpon>201609041257353_InitialDb.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609161534509_addErrorTable.cs" />
-    <Compile Include="Migrations\201609161534509_addErrorTable.Designer.cs">
-      <DependentUpon>201609161534509_addErrorTable.cs</DependentUpon>
+    <Compile Include="Migrations\201609250541119_InitialDb.cs" />
+    <Compile Include="Migrations\201609250541119_InitialDb.Designer.cs">
+      <DependentUpon>201609250541119_InitialDb.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,7 +84,9 @@
     <Compile Include="TeduShopDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -102,11 +100,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201609041257353_InitialDb.resx">
-      <DependentUpon>201609041257353_InitialDb.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609161534509_addErrorTable.resx">
-      <DependentUpon>201609161534509_addErrorTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201609250541119_InitialDb.resx">
+      <DependentUpon>201609250541119_InitialDb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
