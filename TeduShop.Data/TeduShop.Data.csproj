@@ -38,6 +38,14 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -60,6 +68,14 @@
     <Compile Include="Migrations\201609250541119_InitialDb.cs" />
     <Compile Include="Migrations\201609250541119_InitialDb.Designer.cs">
       <DependentUpon>201609250541119_InitialDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609261458368_identityAsp.cs" />
+    <Compile Include="Migrations\201609261458368_identityAsp.Designer.cs">
+      <DependentUpon>201609261458368_identityAsp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609281501207_ChangeKey.cs" />
+    <Compile Include="Migrations\201609281501207_ChangeKey.Designer.cs">
+      <DependentUpon>201609281501207_ChangeKey.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,6 +118,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201609250541119_InitialDb.resx">
       <DependentUpon>201609250541119_InitialDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609261458368_identityAsp.resx">
+      <DependentUpon>201609261458368_identityAsp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609281501207_ChangeKey.resx">
+      <DependentUpon>201609281501207_ChangeKey.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
