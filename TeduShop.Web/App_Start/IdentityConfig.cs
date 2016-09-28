@@ -11,8 +11,16 @@ using TeduShop.Model.Models;
 
 namespace TeduShop.Web.App_Start
 {
+    public class ApplicationUserStore :UserStore<ApplicationUser>
+    {
+        public ApplicationUserStore(TeduShopDbContext context): base(context)
+        {
+
+        }
+    }
     public class ApplicationUserManager : UserManager<ApplicationUser>
     {
+        
         public ApplicationUserManager(IUserStore<ApplicationUser> store)
             : base(store)
         {
