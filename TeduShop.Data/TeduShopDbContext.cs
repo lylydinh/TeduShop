@@ -1,9 +1,12 @@
-﻿using System.Data.Entity;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
 using TeduShop.Model.Models;
 
 namespace TeduShop.Data
 {
-    public class TeduShopDbContext : DbContext
+    //public class TeduShopDbContext : DbContext
+            public class TeduShopDbContext : IdentityDbContext<ApplicationUser>
+
     {
         //khai bao 1 constructor truyen thang connection string
         public TeduShopDbContext() : base("TeduShopConnection")
@@ -31,9 +34,22 @@ namespace TeduShop.Data
         public DbSet<Tag> Tags { set; get; }
         public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
 
+        public DbSet<Error> Errors { get; set; }//tao moi 1 bang error de log loi 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //tao 1 phuong thuc ghi de
+            //xet key cho cac bang user tu sinh tu VS
+            modelBuilder.Entity<IdentityUserRole>().HasKey(p=>new { p.UserId ,p.RoleId});
+            modelBuilder.Entity<IdentityUserLogin>().HasKey(p => p.UserId); 
+
+        }
+
+
+        //1 Phuong thuc tao moi chinh no
+       //  doi 2 cai dbcon tex:ApplicationDbContext thanh TeduShopDbContext
+        public static TeduShopDbContext Create()
+        {
+            return new TeduShopDbContext();
         }
     }
 }
