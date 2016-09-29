@@ -213,6 +213,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\components\products\productAddController.js" />
+    <Content Include="app\components\products\productAddView.html" />
+    <Content Include="app\components\products\productEditController.js" />
+    <Content Include="app\components\products\productEditView.html" />
+    <Content Include="app\components\products\productListController.js" />
+    <Content Include="app\components\products\productListView.html" />
+    <Content Include="app\components\products\products.routes.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -229,13 +236,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\components\orders\" />
-    <Folder Include="app\components\products\" />
     <Folder Include="app\components\product_categories\" />
     <Folder Include="app\components\roles\" />
     <Folder Include="app\components\users\" />
-    <Folder Include="app\shared\directive\" />
     <Folder Include="app\shared\footer\" />
     <Folder Include="app\shared\navigation\" />
+    <Folder Include="app\shared\services\" />
     <Folder Include="App_Data\" />
     <Folder Include="Assets\admin\css\" />
     <Folder Include="Assets\admin\img\" />
