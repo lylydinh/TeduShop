@@ -5,15 +5,19 @@
 
 <!DOCTYPE html>
 
-<html ng-app>@* bao hieu toan bo file nay dung angularjs ten cua ="TeduShop" dat theo modul *@
+<html ng-app="myModule">
+@* bao hieu toan bo file nay dung angularjs ten cua ="TeduShop" dat theo modul *@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
     <script src="~/Scripts/plugins/angular/angular.js"></script> @*/dung cho moi truong phat trien con .min dung cho moi truong prducition*@
+    <script src="~/Scripts/spa/app.js"></script>
 </head>
 <body>
-    <div> 
+    <div ng-controller="myController">
         10+20={{10+20}}
+        @* te bien trong app.js trung voi ten bien trong file html *@
+        {{message}}
     </div>
 </body>
 </html>
