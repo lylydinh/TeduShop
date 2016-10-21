@@ -2,7 +2,11 @@
 
 //keo goi y anguarjs
 (function () {
-    angular.module('tedushop', ['tedushop.products', 'tedushop.common']).config(config);
+    angular.module('tedushop', [
+                    'tedushop.products',
+                    'tedushop.product_categories',
+                    'tedushop.common'
+    ]).config(config);
     //inject 2 doi tuong 
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
